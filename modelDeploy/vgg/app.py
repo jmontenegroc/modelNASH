@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 
-MODEL_PATH = "../../models/NASH_vggwDA.keras"
+MODEL_PATH = "modelDeploy/vgg/NASH_vggwDA.keras"
 
 
 model = load_model(MODEL_PATH)
@@ -22,7 +22,7 @@ uploaded_file = st.file_uploader("Sube tu imagen aquí (formatos admitidos: .jpg
 
 if uploaded_file is not None:
     try:
-        st.image(uploaded_file, caption="Imagen cargada", use_column_width=True)
+        st.image(uploaded_file, caption="Imagen cargada", use_container_width=True)
         image = Image.open(uploaded_file)
         input_image = preprocess_image(image)
         
