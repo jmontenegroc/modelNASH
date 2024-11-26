@@ -16,7 +16,7 @@ def preprocess_image(image):
 
 st.title("Detección de Anomalías en Imágenes de Ecografías")
 st.write("Sube una imagen de ecografía para analizar si contiene anomalías.")
-class_labels = {0: "Normal", 1: "Anomálo"}
+class_labels = {0: "Normal", 1: "Anómalo"}
 
 uploaded_file = st.file_uploader("Sube tu imagen aquí (formatos admitidos: .jpg, .png, .jpeg)", type=["jpg", "jpeg", "png"])
 
