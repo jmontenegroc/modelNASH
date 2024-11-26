@@ -1,13 +1,7 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-
-import os
-
-try:
-    from tensorflow.keras.models import load_model
-except ImportError:
-    os.system("pip install tensorflow")
+from tensorflow.keras.models import load_model
 
 MODEL_PATH = "modelDeploy/vgg/NASH_vggwDA.keras"
 
