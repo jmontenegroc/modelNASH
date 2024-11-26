@@ -16,13 +16,13 @@ def preprocess_image(image):
 
 st.title("Detección de Anomalías en Imágenes de Ecografías")
 st.write("Sube una imagen de ecografía para analizar si contiene anomalías.")
-class_labels = {0: "Normal", 1: "Anomálo"}
+class_labels = {0: "Normal", 1: "Anómalo"}
 
 uploaded_file = st.file_uploader("Sube tu imagen aquí (formatos admitidos: .jpg, .png, .jpeg)", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     try:
-        st.image(uploaded_file, caption="Imagen cargada", use_column_width=True)
+        st.image(uploaded_file, caption="Imagen cargada", use_container_width=True)
         image = Image.open(uploaded_file)
         input_image = preprocess_image(image)
         
