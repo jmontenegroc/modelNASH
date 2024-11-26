@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 
-MODEL_PATH = "../../models/NASH_vggwDA.keras"
+MODEL_PATH = "models/NASH_vggwDA.keras"
 
 
 model = load_model(MODEL_PATH)
